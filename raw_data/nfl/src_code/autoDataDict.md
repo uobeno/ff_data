@@ -1,0 +1,35 @@
+| Label                |  "Column Name"         |  "Detail"                                                                                                                |
+|:---------------------|:-----------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| Rk                   | "ranker"               | "count of the rows from top to bottom"                                                                                   |
+| Player               | "player"               | "Player"                                                                                                                 |
+| Tm                   | "team"                 | "Tm"                                                                                                                     |
+| FantPos              | "fantasy_pos"          | "QB RB WR or TE"                                                                                                         |
+| Age                  | "age"                  | "Player's age on December 31st of that year"                                                                             |
+| Games                | "g"                    | "Games played"                                                                                                           |
+| Games Started        | "gs"                   | "Games started as an offensive or defensive player"                                                                      |
+| Passes Completed     | "pass_cmp"             | "Passes completed"                                                                                                       |
+| Pass Attempts        | "pass_att"             | "Passes attempted"                                                                                                       |
+| Passing Yds          | "pass_yds"             | "Yards Gained by Passing"                                                                                                |
+| Passing TD           | "pass_td"              | "Passing Touchdowns"                                                                                                     |
+| Passes Intercepted   | "pass_int"             | "Interceptions thrown"                                                                                                   |
+| Rushing Att          | "rush_att"             | "Rushing Attempts (sacks not included in NFL)"                                                                           |
+| Rushing Yds          | "rush_yds"             | "Rushing Yards Gained (sack yardage is not included by NFL)"                                                             |
+| Yds/Rushing Att      | "rush_yds_per_att"     | "Rushing Yards per Attempt."                                                                                             |
+| Rushing TD           | "rush_td"              | "Rushing Touchdowns"                                                                                                     |
+| Targets              | "targets"              | "Pass Targets"                                                                                                           |
+| Receptions           | "rec"                  | "Receptions"                                                                                                             |
+| Receiving Yds        | "rec_yds"              | "Receiving Yards"                                                                                                        |
+| Yds/Reception        | "rec_yds_per_rec"      | "Receiving Yards per Reception"                                                                                          |
+| Receiving TD         | "rec_td"               | "Receiving Touchdowns"                                                                                                   |
+| Fumbles              | "fumbles"              | "Both lost and recovered"                                                                                                |
+| Fumbles Lost         | "fumbles_lost"         | "Fumbles Lost"                                                                                                           |
+| Touchdowns           | "all_td"               | "Touchdowns - every type"                                                                                                |
+| 2-pt. Conv. Made     | "two_pt_md"            | "Two-Point Conversions Made"                                                                                             |
+| 2-pt. Conv. Passes   | "two_pt_pass"          | "Two-Point Conversion Passes"                                                                                            |
+| Fantasy Points       | "fantasy_points"       | "1/25 per pass_yrd. 4/pass td. -2/int. 1/10 for rushing & receiving. 6/TD. 2/two-point cnv. -2/fumble lost"              |
+| Fantasy Points (PPR) | "fantasy_points_ppr"   | "1/25 per pass_yrd. 4/pass td. -2/int. 1/10 for rushing & receiving. 6/TD. 2/two-point cnv. -2/fumble lost. 1/reception" |
+| DraftKings points    | "draftkings_points"    | "DraftKings scoring"                                                                                                     |
+| FanDuel points       | "fanduel_points"       | "FanDuel scoring"                                                                                                        |
+| VBD                  | "vbd"                  | "players fantasy points minus the points of the baseline player (12th QB. 24th RB. 30th WR. 12th  TE)"                   |
+| PosRank              | "fantasy_rank_pos"     | "The players fantasy rank within his position"                                                                           |
+| OvRank               | "fantasy_rank_overall" | "The players overall fantasy rank (blank if below the baseline)"                                                         |
