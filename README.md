@@ -13,3 +13,6 @@ To import data in /raw_data
 
 To run the notebooks
 - jupyterlab
+- matplotlib
+- adjustText
+- seaborn
