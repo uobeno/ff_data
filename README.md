@@ -16,3 +16,6 @@ To run the notebooks
 - matplotlib
 - adjustText
 - seaborn
+- mplcursors
+- plotly
+- bokeh
