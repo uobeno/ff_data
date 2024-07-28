@@ -1,4 +1,3 @@
-%%sql
 DROP TABLE IF EXISTS nfl_enhanced;
 CREATE TABLE nfl_enhanced AS 
 SELECT
@@ -14,6 +13,10 @@ SELECT
     ROUND(fantasy_points_ppr / (g*1.0),2) AS fppg_ppr,
     fantasy_points + (rec * 0.5) AS fantasy_points_hppr,
     ROUND(g / (IIF(year >= 2021, 17, 16)*1.00),2) AS pgp,
+
+    -- TODO:
+    -- ADD IN FANTASY POINTS W/O TDS
+    -- TD POINTS
 
     -- Per game attempts and volume
     ROUND(pass_att / (g*1.0),2) AS pass_att_pg,
@@ -43,3 +46,4 @@ SELECT
         ROUND(rec / (rec_td*1.0),2) AS rec_per_td,
         ROUND(rec_yds / (rec_td*1.0),2) AS rec_yds_per_td
 FROM nfl_results
+;

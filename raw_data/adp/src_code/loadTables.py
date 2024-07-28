@@ -1,9 +1,10 @@
 import os
 import pandas as pd
 from sqlalchemy import create_engine
+import os
 
 # Define the directory containing your CSV files
-csv_directory = '/Users/beoconno/documents/ff/raw_data/adp/csv'
+csv_directory = '/Users/beoconno/Documents/ff/ff_data/raw_data/adp/csv'
 
 # Get a sorted list of CSV files in the directory
 file_list = sorted([f for f in os.listdir(csv_directory) if f.endswith('.csv')])
@@ -18,12 +19,22 @@ columns_to_select = ["Bye", "AVG", "Rank", "Team", "POS", "Player"]
 for filename in file_list:
     # Extract the year from the filename (assuming the year is part of the filename)
     year = filename.split('_')[1]  # Adjust this according to your filename pattern
+    print(year)
 
     # Construct the full file path
     file_path = os.path.join(csv_directory, filename)
+
+    # Read the CSV data
+    with open(file_path, 'r') as file:
+        # Replace the escape sequence in the file content like "Le","","'Veon Bell"
+        processed_data = file.read().replace('","","\'', '')
+
+    # Use StringIO to simulate file reading
+    from io import StringIO
+    data_io = StringIO(processed_data)
     
     # # Read the CSV file into a DataFrame
-    df = pd.read_csv(file_path, usecols=columns_to_select)
+    df = pd.read_csv(data_io, usecols=columns_to_select)
     
     # # Add the year column to the DataFrame
     df['Year'] = year

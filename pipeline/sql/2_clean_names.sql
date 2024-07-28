@@ -7,8 +7,12 @@ SELECT
     rank AS adp_ovr,
     team AS adp_team,
     POS AS adp_pos,
+    fpos AS adp_pos_only,
+    adp_pos_rank,
     year AS adp_year,
-    AVG AS adp_avg
+    AVG AS adp_avg,
+    dr10_pick,
+    dr10
 FROM enhanced_adp 
 WHERE 1=1
     AND player IS NOT NULL
@@ -125,7 +129,9 @@ SELECT
     nfl.*,
     COALESCE(adp_join_name,nfl_join_name) AS name,
     COALESCE(cleaned_player,adp_player) AS c_player,
-    COALESCE(year,adp_year) AS c_year
+    COALESCE(year,adp_year) AS c_year,
+    COALESCE(team,adp_team) AS c_team,
+    COALESCE(fantasy_pos,adp_pos_only) AS c_pos
 FROM nfl_adp_name_adp adp
 FULL OUTER JOIN nfl_adp_name_nfl nfl
     ON nfl.year = adp.adp_year

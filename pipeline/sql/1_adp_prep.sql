@@ -7,6 +7,14 @@ SELECT
         substring(pos,1,1), --Only grab the first character for kicker
         substring(pos,1,2) --Grab the first two characters for all other
         ) AS fpos,
+    CAST(
+        IIF( -- Parse the position rank, RB10 becomes "10"
+            LOWER(pos) LIKE 'k%',
+            substring(pos,2), --Start at the 2nd character for kicker
+            substring(pos,3) --Start at the 3rd character for anything else
+            )
+        AS INT
+        ) AS adp_pos_rank,
     -- The pick number that someone was in a round based on 10 team league
     ((rank - 1) % 10) + 1 AS dr10_pick,
     SUBSTRING( -- add the round someone was picked in a 10 team league
