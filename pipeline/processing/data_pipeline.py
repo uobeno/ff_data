@@ -10,7 +10,7 @@ import os
 base_dir = Path(__file__).parent.parent.parent
 
 # Construct the relative path to the nfl database
-db_base = base_dir / "raw_data" / "nfl" / "src_code" / "nfl.db"
+db_base = base_dir / "db_output" / "nfl.db"
 db_path = db_base.resolve()
 
 # Function to execute a SQL file
@@ -25,7 +25,7 @@ def execute_sql_file(connection, sql_file):
 conn = sqlite3.connect(db_path)
 cur = conn.cursor()
 
-adp_base = base_dir / "raw_data" / "adp" / "src_code" / "adp.db"
+adp_base = base_dir / "db_output" / "adp.db"
 adp_path = adp_base.resolve()
 
 # Attach the secondary database (adp.db)
@@ -47,7 +47,7 @@ start_dir = Path(__file__).parent.parent
 sql_base = start_dir / "sql"
 
 # Execute each SQL file
-for sql_file in [sql_files[5]]:
+for sql_file in sql_files:
     file_path = sql_base / sql_file
     execute_sql_file(conn, file_path.resolve())
 
