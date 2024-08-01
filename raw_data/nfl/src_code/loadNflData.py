@@ -15,9 +15,12 @@ csv_directory = csv_dir_path.resolve()
 # Get a sorted list of CSV files in the directory
 file_list = sorted([f for f in os.listdir(csv_directory) if f.endswith('.csv')])
 print(file_list)
+# /Users/beoconno/Documents/ff/ff_data/raw_data/nfl/src_code/loadNflData.py
+db_dir = script_dir.parent.parent.parent / 'db_output'
+db_path = db_dir.resolve()
 
 # Create a SQLite database (or connect to an existing one)
-engine = create_engine(f'sqlite:///{script_dir}/nfl.db')
+engine = create_engine(f'sqlite:///{db_path}/nfl.db')
 
 # Create a session
 Session = sessionmaker(bind=engine)

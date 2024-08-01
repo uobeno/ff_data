@@ -1,3 +1,5 @@
+# Note: this file isn't complete but it SHOULD work by attaching to the existing databse and
+# adding a table for adp instead of creating a new database
 import os
 import pandas as pd
 from sqlalchemy import create_engine

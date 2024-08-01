@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from sqlalchemy import create_engine
-import os
+from pathlib import Path
 
 # Define the directory containing your CSV files
 csv_directory = '/Users/beoconno/Documents/ff/ff_data/raw_data/adp/csv'
@@ -9,8 +9,12 @@ csv_directory = '/Users/beoconno/Documents/ff/ff_data/raw_data/adp/csv'
 # Get a sorted list of CSV files in the directory
 file_list = sorted([f for f in os.listdir(csv_directory) if f.endswith('.csv')])
 
+# /Users/beoconno/Documents/ff/ff_data/raw_data/adp/src_code/loadTables.py
+db_dir = Path(__file__).parent.parent.parent.parent / 'db_output'
+db_path = db_dir.resolve()
+
 # Create a SQLite database (or connect to an existing one)
-engine = create_engine('sqlite:///adp.db')
+engine = create_engine(f'sqlite:///{db_path}/adp.db')
 
 # Columns to select from each CSV file
 columns_to_select = ["Bye", "AVG", "Rank", "Team", "POS", "Player"]
