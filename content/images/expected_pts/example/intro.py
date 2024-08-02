@@ -33,3 +33,5 @@ fig.update_layout(title='Plotly Plot Grid', height=400, width=800)
 
 # Save and show the figure
 fig.write_image('plotly_grid.png')
+
+fig.show()

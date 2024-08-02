@@ -35,8 +35,8 @@ color_palette = [
 # Define your custom template
 custom_template = go.layout.Template(
     layout=go.Layout(
-        font=dict(family='Impact, sans-serif', size=14, color='#333333'),
-        title=dict(font=dict(size=20, color='#333333', family='Impact, sans-serif')),
+        font=dict(family='Roboto Condensed, sans-serif', size=14, color='#333333'),
+        title=dict(font=dict(size=20, color='#333333', family='Roboto Condensed, sans-serif')),
         paper_bgcolor='#F0F0F0',
         plot_bgcolor='#FFFFFF',
         xaxis=dict(

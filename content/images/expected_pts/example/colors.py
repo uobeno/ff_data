@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 # Define the path to the styles directory
-styles_path = Path(__file__).resolve().parent.parent / 'utils'
+styles_path = Path(__file__).resolve().parent.parent.parent / 'utils'
 # Add the styles directory to sys.path
 sys.path.append(str(styles_path.resolve()))
 
