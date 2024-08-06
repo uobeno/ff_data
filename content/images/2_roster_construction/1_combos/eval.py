@@ -1,0 +1,63 @@
+# expected_total.py
+import sys
+from pathlib import Path
+import pandas as pd
+import itertools
+
+# Define the path to the styles directory
+styles_path = Path(__file__).resolve().parent.parent.parent / 'utils'
+# Add the styles directory to sys.path
+sys.path.append(str(styles_path.resolve()))
+
+# Import the custom template
+from query import query
+
+# Get data for our query
+df = query('image_roster_1combo_prep','prep.sql')
+
+# Step 1: Create dictionaries from specified columns
+df['player_dict'] = df[['name', 'position', 'games', 'fppg_ppr', 'round']].apply(lambda row: row.to_dict(), axis=1)
+print('add player dict')
+print(df.head())
+
+# Step 2: Group by 'round' and collect dictionaries into arrays
+grouped = df.groupby('round')['player_dict'].apply(list).reset_index(name='dict_array')
+print('create draft round options')
+print(grouped.head())
+
+# Step 3: Dump arrays into a single array
+all_dictionaries = grouped['dict_array'].tolist()
+
+# Display the final output
+print("\nFinal Array of Dictionary Arrays:")
+for i, array in enumerate(all_dictionaries[:2], start=1):
+    print(f"Round {i}:")
+    for d in array:
+        print(d)
+
+# Use itertools.product to generate combinations
+combinations = list(itertools.product(*all_dictionaries))
+
+print('made combos: ' + str(len(combinations)))
+
+# Display the combinations
+print("\nCombinations of Dictionaries:")
+for combination in combinations[:5]:
+    print(combination)
+
+# Let's put the combinations into a pandas dataframe
+# Flatten combinations into a list of dictionaries with team_id
+players_list = []
+for team_id, team in enumerate(combinations, start=1):
+    for player in team:
+        player_with_team = player.copy()
+        player_with_team['team_id'] = team_id
+        players_list.append(player_with_team)
+
+# Create a DataFrame from the list of dictionaries
+draft_db = pd.DataFrame(players_list)
+
+print("drafted players: " + str(len(draft_db)))
+
+print('output db sample: ')
+draft_db.head()

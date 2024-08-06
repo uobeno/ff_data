@@ -25,7 +25,7 @@ We'll look at the data behind those claims and (hopefully) all be better informe
 ## Expected fantasy points for a given draft pick
 One of the things JJ is famous for is the chart below that shows how many points you expect to get when you draft a given player based on their draft position.
 
-![JJ expected points](<../images/expected_pts/Screenshot 2024-08-01 at 10.08.17 PM.png>)
+![JJ expected points](<../images/1_1_expected_pts/Screenshot 2024-08-01 at 10.08.17 PM.png>)
 
 I love this chart, I think it's great. 
 In fact, I think it's so great that we're going to start from this point too!  
@@ -36,7 +36,7 @@ In JJ's chart, it's the average of all the RBs that drafted at RB1, in this char
 
 I think both ways are accurate, JJs shows what you can expect based on the market, and here we show what you'd get if the market was 100% accurate.
 
-![Expected total points for finishing position rank](../images/expected_pts/1_expected_total/expected_total.png)
+![Expected total points for finishing position rank](../images/1_expected_pts/1_expected_total/expected_total.png)
 
 Wonderful, we have a place to start from!
 
@@ -60,7 +60,7 @@ Wonderful, we have a place to start from!
 
 Here's a an overview of the drop off from 1 - 20 for the key positions
 
-![Expected drop off ppr ppg](../images/expected_pts/2_expected_drop/expected_drop.png)
+![Expected drop off ppr ppg](../images/1_expected_pts/2_expected_drop/expected_drop.png)
 
 Wonderful, you can see that the drop off from QB is strong, but the drop off for RB is WAY stronger. I think we know this intuitively, a TOP RB is a massive advantage, and you aren't that excited to sub in an RB2 or RB3 if they go down. 
 
@@ -79,7 +79,27 @@ Here's an example (all hypothetical):
 
 Here's a real example
 
-![Antonio brown expected vs actual fantasy points per game](../images/expected_pts/3_accuracy_example/accuracy_ex.png)
+![Antonio brown expected vs actual fantasy points per game](../images/1_expected_pts/3_accuracy_example/accuracy_ex.png)
+
+Woo! Now we're looking at something cool.
+
+Antonio Brown was drafted as the WR1 overall for several years and TOTALLY lived up to it.
+Sure, he underperformed vs the historical average, but only by a point or two; he still ranked as the WR1 or WR2 on the year. 
+
+Then, when we drafted him as the WR9, WR71, and WR29, he matched or exceeded those expectations!
+In 2021, he scored a whopping 4ppg MORE than we expected, we were totally wrong. 
+
+Well ... in this case we weren't becuase he famously walked off the field ... but when he was ON the field, we were wrong. 🙂
+
+How can we look at this graphically?
+![Antonio brown expected vs actual graph](../images/1_expected_pts/3_accuracy_example_graph/accuracy_ex_graph.png)
+
+Let's expand this to look at a LOT more players and look at each draft by year.
+![All drafts expected vs actual graph](../images/1_expected_pts/4_accuracy_graph/accuracy_graph.png)
+
+This is amazing, and outlines a lot of the players we've touted as "busts" or "league winners" over the last 8 years. 
+
+Some of the names overlap, here's a more clear way to see it, just focusing on the biggest surprises or the biggest busts.
 
 
 

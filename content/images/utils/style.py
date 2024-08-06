@@ -1,10 +1,10 @@
 import plotly.graph_objects as go
 
 """
-Late round green (QB): #93F063
-Late round yellow (WR): #F8D82F
-Late round blue (TE): #3E3BD0
-Late round red (RB): #E94126
+Late round green QB: #93F063
+Late round yellow WR: #F8D82F
+Late round blue TE: #3E3BD0
+Late round red RB: #E94126
 
 Supporting Colors:
 Light Gray: #F0F0F0 (for backgrounds)
