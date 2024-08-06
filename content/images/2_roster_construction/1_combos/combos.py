@@ -19,7 +19,7 @@ df = query('image_roster_1combo_prep','combo_prep.sql')
 # Step 1: Create dictionaries from specified columns
 df['player_dict'] = df[['name', 'position', 'games', 'fppg_ppr', 'round', 'year']].apply(lambda row: row.to_dict(), axis=1)
 print('add player dict')
-print(df.head())
+# print(df.head())
 
 # Step 2: Group by 'round' and collect dictionaries into arrays
 grouped = df.groupby(['round', 'year'])['player_dict'].apply(list).reset_index(name='dict_array')
