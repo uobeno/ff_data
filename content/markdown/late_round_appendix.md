@@ -25,7 +25,7 @@ We'll look at the data behind those claims and (hopefully) all be better informe
 ## Expected fantasy points for a given draft pick
 One of the things JJ is famous for is the chart below that shows how many points you expect to get when you draft a given player based on their draft position.
 
-![JJ expected points](<../images/1_1_expected_pts/Screenshot 2024-08-01 at 10.08.17 PM.png>)
+![JJ expected points](<../images/1_expected_pts/Screenshot 2024-08-01 at 10.08.17 PM.png>)
 
 I love this chart, I think it's great. 
 In fact, I think it's so great that we're going to start from this point too!  
@@ -68,6 +68,23 @@ The question is, can we reliably draft those RBs?
 
 This chart is where they finish, but can we know that order before the season ... read on. 
 
+### Expected points - average is ... average ? 
+Let's take a brief moment to call out why "average" isn't always the best metric to capture some of the variance that there is in fantasy football.
+
+Here, we'll just note the individual lines vs the average of those lines and how much different each year is vs the average.
+
+**Change the colors of this at a later date**
+
+![Points scored by year at each draft position vs average](../images/1_expected_pts/4_accuracy_graph_year/accuracy_graph_year.png)
+
+Why are there two averages?
+1. draft avg - is the average points scored for that draft position
+1. finish avg - the average draft points for a player that FINISHED in that position 
+
+Our goal is to live ABOVE that average line, and ignore the players that are BELOW the line. 
+
+Note how the top of the RB line is more "scattered" than the "WR" line? 
+
 ### Draft predictability
 We have the expected points for a given finish, and we have the place that a player was drafted, so we can compare those two to see if the draft pick was correct or not.
 
@@ -102,15 +119,28 @@ This is amazing, and outlines a lot of the players we've touted as "busts" or "l
 Some of the names overlap, here's a more clear way to see it, just focusing on the biggest surprises or the biggest busts.
 
 
-
-### Expected points - average is ... average ? 
-Look at the expected points graph with one line for each year and a line for average.
-
-![Points scored by year at each draft position vs average](../images/1_expected_pts/4_accuracy_graph_year/accuracy_graph_year.png)
-
 ### But ... accuracy ... how good are we?
+Let's look at some scatter plots where we compare the points we EXPECTED a player to score, vs what they actually scored.
 
+![Accuracy scatter plot of expected vs actual points](../images/1_expected_pts/4_accuracy_scatter/accuracy_graph_scatter.png)
 
+... I might just be confirming my priors, but I felt a bit validated w/ these plots.
+
+Let's go over it, each line is the regression of best fit.
+
+If that line matched the reference line, we'd be predicing players perfectly; their pre draft rank would be equal to their post draft performance.
+
+And ... we do pretty great! 
+
+Each line has an R2 and a slope to the line. If the slope was 1, the better we'd be at prediction.
+
+What is the slope for each position?
+* QB: .82
+* RB: .78
+* TE: todo
+* WR: .95
+
+I think this is amazing. We are really really good at predicting wide reciever! We are pretty good at QB, and we are just slightly worse at predicting the RB. This makes sense, and this is a lot of what the "zero" or "hero" RB drafters have been saying. 
 
 ### Busts
 
