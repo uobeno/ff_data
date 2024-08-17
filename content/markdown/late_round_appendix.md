@@ -106,9 +106,29 @@ Some of the names overlap, here's a more clear way to see it, just focusing on t
 ### Expected points - average is ... average ? 
 Look at the expected points graph with one line for each year and a line for average.
 
+![Points scored by year at each draft position vs average](../images/1_expected_pts/4_accuracy_graph_year/accuracy_graph_year.png)
 
+### But ... accuracy ... how good are we?
+
+
+
+### Busts
+
+### Heros
 
 ## Draft strategy
+The sankey chart will go like this.
+Take the best player at that position in each round. 
+Compute all possible teams that could be drafted.
+All teams that scored above 120 in the season.
+
+1000 drafted cmc overall -> 800 to cd lamb -> 200 to josh allen
+200 tyreek
+100 kelce
+
+
+
+
 ### Health
 
 ### Simulations
@@ -123,4 +143,69 @@ Team totals
 Supporting 2 wr or 2 rb or 1 wr and 1 rb
 
 "They've done it before" 
+
+
+Also consider doing somethereing where we adjust the roudns based on where someone is picking.
+For example, it's unlikely that someone picking in the 7 spot will be able to pick one of adp 1-3.
+
+The 7 spot will draft at
+7
+14
+21
+28
+35
+
+and the players that are really available are
+7: 4-14
+14: 11-21
+21: 18-28
+
+which can be generalized by saying
+draft slot - 3 to draft slot + 7
+
+
+let's look at an example when you draft at the number 1 spot
+1: 1-20
+20:  
+21: 
+
+snake draft pick by pick example
+(round 1)  1,  2,  3,  4,  5,  6,  7,  8,  9, 10
+(round 2) 20, 19, 18, 17, 16, 15, 14, 13, 12, 11
+(round 3) 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+(round 4) 40, 39, 38, 37, 36, 35, 34, 33, 32, 31
+
+generalize this
+league size: 10
+odd / even round: 1, 3, 5, 7 vs 2, 4, 6, 8
+draft slot: 7
+if odd:
+    (league size * (round - 1)) + draft slot
+    10 * (1 - 1) + 7 = 7
+    10 * (3 - 1) + 7 = 27
+if even:
+    (league size * round) - (draft slot - 1)
+    (10 * 2) - (7-1) = 14
+    (10 * 4) - (7-1) = 34
+
+take thses picks and adjust the players in each "round"s
+remainder = league size - draft slot
+remainder for pick 1: 10 - 1 = 9 
+remainder for pick 7: 10 - 7 = 3
+
+pick - remainder = available "start"
+pick + (remainder * 2) = available "end"
+
+for slot 1 in a 10 team league remainder is 9
+    pick 20 "start" is 20 - 9 = 11
+    pick 20 "end" is 20 + (9*2) = 38
+
+for slot 7 in 10 team league remainder is 3
+    pick 14 "start" is 14 - 3 = 11
+    pick 14 "end" is 14 + (3*2) = 20
+
+    pick 27 "start" is 27 - 3 = 24
+    pick 27 "end" is 27 + (3*2) = 33
+
+should the range increase as the rounds go on? likely
 -->

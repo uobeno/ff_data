@@ -26,11 +26,14 @@ def connect_to_db():
     # Attach the secondary database (adp.db)
     attach_sql = f"ATTACH DATABASE '{adp_path}' AS adp_db;"
     cur.execute(attach_sql)
+
+    print("Connected to the database")
+
     return conn, cur
 
 def query(table_name, sql_file_path):
     executing_from = Path(__file__).resolve
-    print(f"Execuging from: {executing_from}")
+    print(f"Executing from: {executing_from}")
 
     # Connect to the SQLite database
     conn , cur = connect_to_db()
@@ -38,6 +41,7 @@ def query(table_name, sql_file_path):
     try:
         # Read the SQL file
         with open(sql_file_path, 'r') as file:
+            print("sql file: " + sql_file_path)
             sql_content = file.read()
 
         # Prepare the query with DROP and CREATE TABLE

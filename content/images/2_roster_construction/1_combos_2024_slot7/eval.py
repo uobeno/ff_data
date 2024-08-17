@@ -2,7 +2,6 @@
 import sys
 from pathlib import Path
 import pandas as pd
-import itertools
 
 # Define the path to the styles directory
 styles_path = Path(__file__).resolve().parent.parent.parent / 'utils'
@@ -13,4 +12,4 @@ sys.path.append(str(styles_path.resolve()))
 from query import query
 
 # Get data for our query
-df = query('image_roster_1combo_eval','eval.sql')
+df = query('image_roster_1combo_eval_2024_s7','eval.sql')
