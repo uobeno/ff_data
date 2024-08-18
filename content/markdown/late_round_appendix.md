@@ -214,6 +214,38 @@ So ... what would be useful?
 1. dead cat bounce
     1. after a decline, do we spot a bounce back? or the end of a career?
 
+### Defining high hype, no hype, or reverse hype
+Let's start by just looking at the data and figuring out how we can identify the hype categories.
+
+Here, we'll look at a scatter plot of expected points vs hype. As the expected points goes up, the hype can go up too. As a players draft cost goes up, their ability to have hype also increases. To deal with that, we'll look at hype as a percentage of the points we're expecting them to score.
+
+Example:
+* if someone has 2 points of hype, but we expect them to score 20, that's not a big deal, it's only 10% of their points.
+* conversely, if we expect them to score 5 points, the hype is nearly 40% of their expectation
+
+![Hype percentage](../images/3_hype/2_define_high_hype/hype_define_percent_scatter.png)
+
+Start here and discuss the takeaways. Should we also look at raw points of hype?
+
+![Hype percent distribution](../images/3_hype/2_define_high_hype/hype_define_percent_hist.png)
+
+
+#### High
+
+#### No
+#### Reverse
+
+### High hype players (step up)
+
+### No hype players (stable)
+
+### Reverse hype players (step back)
+
+### Post performance influence on hype
+Players who had a high "surprise" or accuracy in one season. Do we hype them the next?
+Players who had a high "dissapoine" or low accuracy in one season. Do we dawg them the next?
+Or do we expect a bounce back?
+
 ## Draft strategy
 The sankey chart will go like this.
 Take the best player at that position in each round. 
