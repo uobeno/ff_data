@@ -19,7 +19,7 @@ from query import query
 pio.templates.default = custom_template
 
 # Get data for our query
-df = query('image_ep_3_hype_ex_graph','hype_ex_graph.sql')
+df = query('image_ep_3_hype_ex_graph_ja','hype_ex_graph_ja.sql')
 
 # Create a figure
 fig = go.Figure()
@@ -71,7 +71,7 @@ for metric, color in zip(metrics, colors):
 # Update layout for grouped bars
 fig.update_layout(
     barmode='group',
-    title='AB: Hype and Accuracy vs ADP Expected PPG',
+    title='Josh Allen: Hype and Accuracy vs ADP Expected PPG',
     xaxis_title='Year',
     yaxis_title='Value',
     legend_title='Metrics'
@@ -81,5 +81,5 @@ fig.update_layout(bargap=0.4)
 fig.update_layout(bargroupgap=0.4)
 
 # Save the figure
-fig.write_image('hype_graph.png', scale=2)
+fig.write_image('hype_graph_ja.png', scale=2)
 

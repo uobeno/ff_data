@@ -173,6 +173,47 @@ Let's visualize this career, how much hype we added, and how accurate we were!
 
 ![AB hype graph example](../images/3_hype/1_hype_example_graph/hype_graph.png)
 
+We can visualize a career many different ways. What I like about this design is that we visualize the **expectations** of a career, and how good we were ad juding those. 
+
+Here are some quick takeaways for ABs career:
+1. We accurately predicted that he would be a 23 PPG player (which is amazing)
+1. We correctly spotted the drop off of 5 points in 2019
+1. We over reacted in 2020 and expected a paultry 8 points per game
+
+Can we extrapolate that out to the rest of the market with WRs? That's part of what we'll look into in the rest of this section.
+
+For now, let's dive into another, more recent career ... **Jonathan Taylor**
+
+![JT hype vs accuracy example](../images/3_hype/1_hype_example_graph_jt/hype_graph_jt.png)
+
+This is a much different graph. Here we're looking at the START of a players career, as opposed to the back half. 
+
+Let's talk through this:
+1. rookies are all hype ... and are frequently under hyped ... even for JT
+1. we expected a strong 2nd season and he did even better
+1. we figured that would continue into 2022 and he massively underperformed ...
+1. we expected a small gain in 2023 and he live up to it! 
+
+Let's do one more while we're at it ... **Josh Allen**
+
+![Josh Allen hype vs accuracy](../images/3_hype/1_hype_example_graph_ja/hype_graph_ja.png)
+
+Takeaways:
+1. The rookie was hyped, and he outperformed our expectations
+1. The second year was similar
+1. The 3rd year he exploded
+1. Year 4, 5, 6 we expected a LOT and he 100% lived up to it
+
+So ... what would be useful?
+1. high hype players
+    1. are we accurate? do we know who will do better?
+1. no hype players
+    1. are we accurate? or not? can we predict who is stable?
+1. expected decline
+    1. can we spot the end of the end?
+1. dead cat bounce
+    1. after a decline, do we spot a bounce back? or the end of a career?
+
 ## Draft strategy
 The sankey chart will go like this.
 Take the best player at that position in each round. 
