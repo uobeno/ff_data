@@ -146,6 +146,33 @@ I think this is amazing. We are really really good at predicting wide reciever! 
 
 ### Heros
 
+### Teams
+Do we miss on teams w/ certain characteristics?
+
+## Hype
+We looked at ton at "expected points" for someone drafted at a given position.
+
+These are things like "the RB5 has historically scored 18 points, player x scored 20 points, so they outperformed by 2 points" - we called this **accuracy**. 
+
+What if we look at a players performance the year before?
+We can compare that to what we're expecting them to do to see if we have high or low expectations.
+
+**Hype** is how we'll refer to this:
+* **Hype** = (expected points at ADP) - (prior year points)
+
+### Example
+Let's go back to our Antonio Brown example to understand the metric a bit more.
+
+![Hype example of Antonio Brown](../images/3_hype/1_hype_example/hype_ex.png)
+
+Let's walk through this so it is super clear:
+* 2017: Brown scored 20.49 points per game the prior year, we **expect** him to score 23.2 points per game. That means we have about **3 points of hype**. He had a great season and scored 22 points per game. 
+* 2020: This is a bit more interesting. Brown scored only 16.1 ppg the prior year. Based on draft positioni, we **expect him to do 8 points WORSE and score 8 ppg**; **-8 points of hype**. He outperformed that, scored 14 points per game, and had a 6 point pick accuracy difference. Was a huge win for players who drafted AB that year.
+
+Let's visualize this career, how much hype we added, and how accurate we were!
+
+![AB hype graph example](../images/3_hype/1_hype_example_graph/hype_graph.png)
+
 ## Draft strategy
 The sankey chart will go like this.
 Take the best player at that position in each round. 
